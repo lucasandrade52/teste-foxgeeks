@@ -1,0 +1,15 @@
+input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 40px;
+  margin: 10px auto;
+  padding: 5px 10px;
+  width: 70%;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid #7a7af5;
+    box-shadow: 0 0 1px 0 #7a7af5;
+    
+  }
+}

@@ -1,0 +1,60 @@
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  margin: 0 auto;
+  background-color: #1D1E20;
+  border-bottom: 5px solid #56575C;
+
+  .navbar-header__login {      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    a {
+      color: #ffff;
+      text-decoration: none;
+    }
+
+    span {
+      color: #FF6C1D;
+    }
+  }
+
+  .navbar-header__contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    a {
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phone {
+      color: #ffffff;
+    }
+    
+    .mail {
+      color: #FF6C1D;
+    }
+
+    .whats {
+      background-color: #2fbd50;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      height: 100%;
+    }
+
+    & span {
+      margin: 0 5px;
+    }
+  }  
+}
