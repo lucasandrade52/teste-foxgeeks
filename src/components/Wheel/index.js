@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Close } from '@material-ui/icons';
 
 import Button from '../Button';
 import Input from '../Input';
@@ -41,6 +43,7 @@ export default class Wheel extends React.Component {
 
     return (
       <section className="control">
+        <Link className="close" to="/"><Close /></Link>
         <div className="control__title">
           <Title head={"h2"} title={TITLE_WHEEL} />
           <p>{TEXT_WHEEL}</p>

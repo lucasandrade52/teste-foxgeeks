@@ -15,12 +15,20 @@
 }
 
 .control {
-  width: 100%;
+  max-width: 1280px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: row-reverse;
   text-align: center;
+  margin: 24px auto;
+  padding: 24px 12px;
+  border: solid 0.5px gray;
+  border-radius: 36px;
+
+  a {
+    display: flex;
+    color: red;
+  }
   
   .control__title {
     display: flex;
@@ -30,14 +38,17 @@
     width: 50%;
 
     input {
-      border-radius: 36px;
       text-align: center;
     }
 
     button {
       width: 70%;
-      border-radius: 36px;
       outline: none;
+    }
+
+    p {
+      width: 50%;
+      margin: 36px auto;
     }
   }
 }

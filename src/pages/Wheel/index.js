@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style.scss'
+
 import Header from '../../components/Header';
 import Wheel from '../../components/Wheel';
 

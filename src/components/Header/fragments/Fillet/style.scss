@@ -5,6 +5,7 @@
   margin: 0 auto;
   background-color: #1D1E20;
   border-bottom: 5px solid #56575C;
+  max-width: 1280px;
 
   .navbar-header__login {      
     display: flex;
@@ -20,6 +21,10 @@
 
     span {
       color: #FF6C1D;
+
+      &:hover {
+        color: #ff5900;
+      }
     }
   }
 
@@ -42,6 +47,7 @@
     
     .mail {
       color: #FF6C1D;
+
     }
 
     .whats {
@@ -51,10 +57,15 @@
       align-items: center;
       padding: 0 5px;
       height: 100%;
+      
+      &:hover {
+        color: #1D1E20;
+      }
+  
+      span {
+        margin: 0 5px;
+      }
     }
 
-    & span {
-      margin: 0 5px;
-    }
   }  
 }
