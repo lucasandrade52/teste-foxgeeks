@@ -1,9 +1,9 @@
 :root {
-  --wheel-font: 'Lato', 'Quicksand', sans-serif;
+  --wheel-font: "Verdana", "Geneva", sans-serif;
   --wheel-size: 400px;
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 5px;
-  --wheel-color: #CA2800;
+  --wheel-color: #ca2800;
   --neutral-color: white;
   --PI: 3.14159265358979;
   --nb-item: 0;
@@ -22,14 +22,7 @@
   text-align: center;
   margin: 24px auto;
   padding: 24px 12px;
-  border: solid 0.5px gray;
-  border-radius: 36px;
 
-  a {
-    display: flex;
-    color: red;
-  }
-  
   .control__title {
     display: flex;
     align-items: center;
@@ -44,6 +37,8 @@
     button {
       width: 70%;
       outline: none;
+      margin-right: 0;
+      margin-top: 10px;
     }
 
     p {
@@ -52,7 +47,6 @@
     }
   }
 }
-
 
 /* Conteneur de la roue = cercle rose extérieur */
 .wheel-container {
@@ -72,7 +66,7 @@
 /* Triangle de sélection = 1 rose +  1 blanc */
 .wheel-container::before,
 .wheel-container::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   height: 0;
@@ -113,14 +107,19 @@
 
 .wheel.spinning {
   transition: transform var(--spinning-duration);
-  transform: rotate(calc(var(--nb-turn) * 360deg + (-360deg * var(--selected-item) / var(--nb-item, 1))));
+  transform: rotate(
+    calc(
+      var(--nb-turn) * 360deg +
+        (-360deg * var(--selected-item) / var(--nb-item, 1))
+    )
+  );
 }
 
 /* Centre de la roue = rond blanc au centre */
 .wheel::after {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   background-color: var(--neutral-color);
   width: 25px;
   height: 25px;
@@ -142,7 +141,8 @@
   left: 50%;
   width: 50%;
   transform-origin: center left;
-  transform: translateY(-50%) rotate(calc(var(--item-nb) * (360deg / var(--nb-item, 1))));
+  transform: translateY(-50%)
+    rotate(calc(var(--item-nb) * (360deg / var(--nb-item, 1))));
 
   /* texte */
   color: var(--neutral-color);
@@ -153,7 +153,7 @@
 
 /* Background de l'élément = triangle rose plus clair */
 .wheel-item:before {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   box-sizing: border-box;
@@ -173,8 +173,12 @@
     mais globalement ca marche a peu près bien 
     TODO: A étudier 
   */
-  --slice-max-width: calc(var(--PI) * var(--wheel-size) + var(--wheel-size) / 2);
-  --slice-width: calc((var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing));
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   /* profondeur du triangle = du centre de la roue à la bordure = 300px / 2 */

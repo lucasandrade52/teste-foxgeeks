@@ -1,0 +1,12 @@
+.actions {
+  display: flex;
+}
+
+button {
+  font-weight: bold;
+  margin-right: 10px;
+
+  &:not(:last-child) {
+    width: 70px;
+  }
+}

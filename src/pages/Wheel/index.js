@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import './style.scss'
+import Header from "../../components/Header";
+import Wheel from "../../components/Wheel";
+import Footer from "../../components/Footer";
 
-import Header from '../../components/Header';
-import Wheel from '../../components/Wheel';
-
-import { ITEMS_WHEEL } from '../../constants'
+import { ITEMS_WHEEL } from "../../constants";
+import "./style.scss";
 
 export default function WheelPage() {
   return (
     <>
       <Header />
-      <h1>Wheel</h1>
       <Wheel items={ITEMS_WHEEL} />
-    </>  
-  )
+      <Footer />
+    </>
+  );
 }

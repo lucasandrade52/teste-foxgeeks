@@ -1,0 +1,19 @@
+.footer {
+  background-color: #ca2800;
+  border-top: #ef5300;
+  height: 100px;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    color: #ffffff;
+  }
+
+  .logo {
+    margin: 10px auto 0;
+    width: 50px;
+  }
+}
